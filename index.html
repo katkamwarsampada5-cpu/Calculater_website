@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculater </title>
-     <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculater">
-       <input type="text" placeholder="0" id="input"> 
-       
-       
-       <div >
-           <button class="oprater">()</button>
-           <button class="oprater" >%</button>
-           <button class="oprater" >/</button>
-           <button class="oprater">AC</button>
-       </div>
-
-
-       <div>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="o">*</button>
-       </div>
-       <div>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="o">-</button>
-       </div>
-       <div>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="o">+</button>
-       </div>
-
+  <main class="page-shell">
+    <section class="calculator">
+      <div class="topbar">
         <div>
-        <button>0</button>
-        <button>.</button>
-        <button >DEL</button>
-        <button class="s">=</button>
-       </div>
-       </div>
+          <p class="eyebrow">Quick tools</p>
+          <h1>Calculator</h1>
+        </div>
+        <span class="status-dot"></span>
+      </div>
 
-       <script src="script.js"></script>
-      
+      <div class="display-wrap">
+        <div id="previousInput" class="previous-input"></div>
+        <input id="input" class="display" type="text" value="0" readonly>
+      </div>
+
+      <div class="button-grid">
+        <button class="key utility" data-value="AC">AC</button>
+        <button class="key utility" data-value="DEL">DEL</button>
+        <button class="key utility" data-value="(">(</button>
+        <button class="key utility" data-value=")">)</button>
+
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key operator" data-value="/">÷</button>
+
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key operator" data-value="*">×</button>
+
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key operator" data-value="-">−</button>
+
+        <button class="key zero" data-value="0">0</button>
+        <button class="key" data-value=".">.</button>
+        <button class="key operator" data-value="+">+</button>
+
+        <button class="key percent" data-value="%">%</button>
+        <button class="key equals" data-value="=">=</button>
+      </div>
+      <p class="hint">Keyboard input is supported</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
